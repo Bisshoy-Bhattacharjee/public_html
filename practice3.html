@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="password" id="password1" placeholder="Enter password">
+    <input type="password" id="password2" placeholder="Re-enter password">
+    <button onclick="verifyPassword()">Verify</button>
+    <script>
+        function verifyPassword() {
+            const password1 = document.getElementById('password1').value;
+            const password2 = document.getElementById('password2').value;
+            
+            if (password1.length < 8 || password1 !== password2) {
+                alert("Password Incorrect");
+            } else {
+                alert("Passwords matched!");
+            }
+        }
+    </script>
+</body>
+</html>

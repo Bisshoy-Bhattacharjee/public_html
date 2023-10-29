@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .custom-paragraph {
+            border: 2px solid black;
+            padding: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="colorInput" placeholder="Enter RGB color (e.g., 255,0,0)">
+        <input type="number" id="borderWidth" placeholder="Enter border width">
+        <button onclick="changeColorAndWidth()">Apply</button>
+    </div>
+    <p class="custom-paragraph"> Writing this here for no reason.</p>
+    <script>
+        function changeColorAndWidth() {
+            const colorInput = document.getElementById('colorInput').value;
+            const borderWidth = document.getElementById('borderWidth').value;
+            const paragraph = document.querySelector('.custom-paragraph');
+            paragraph.style.color = `rgb(${colorInput})`;
+            paragraph.style.borderWidth = `${borderWidth}px`;
+        }
+    </script>
+</body>
+</html>
